@@ -26,7 +26,7 @@ jobs:
       - name: Determine version
         run: echo "VER=$(ls release/PUBLISH_v* | sed 's|release/PUBLISH_||' | sort -V | tail -1)" >> "$GITHUB_ENV"
       - name: Build release assets
-        run: python3 -I scripts/build_release_assets.py dist tredoku-pattern-digit-filling \"$VER\"
+        run: python3 -I scripts/build_release_assets.py dist tredoku-pattern-digit-filling "$VER"
       - name: Create tag and release (once per version)
         env:
           GH_TOKEN: ${{ github.token }}

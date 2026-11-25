@@ -4,6 +4,7 @@
 [![Replay corroborating computation](https://github.com/DannyExperiments/tredoku-pattern-digit-filling/actions/workflows/replay.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/tredoku-pattern-digit-filling/actions/workflows/replay.yml)
 [![PDF build](https://github.com/DannyExperiments/tredoku-pattern-digit-filling/actions/workflows/pdf.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/tredoku-pattern-digit-filling/actions/workflows/pdf.yml)
 [![Partial Lean verification](https://github.com/DannyExperiments/tredoku-pattern-digit-filling/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/tredoku-pattern-digit-filling/actions/workflows/lean.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24544626.svg)](https://doi.org/10.5281/zenodo.24544626)
 
 The Lean badge covers the logical core only: the crossing lemma and the labelling. The run structure of patterns is a hypothesis there.
 
@@ -61,7 +62,7 @@ Download [`visualization/tredoku-filling-explorer.zip`](visualization/tredoku-fi
 
 ## Citation
 
-Not yet archived. A Zenodo DOI will be added at release. See [`CITATION.cff`](CITATION.cff).
+Version 1.0.1 is archived at Zenodo: version DOI [10.5281/zenodo.24544626](https://doi.org/10.5281/zenodo.24544626), concept DOI for all versions [10.5281/zenodo.24544625](https://doi.org/10.5281/zenodo.24544625). Version 1.0.1 is the reviewed Version 1.0.0 plus archive metadata only; the mathematics, manuscript, code and logs are unchanged. The immutable GitHub releases are [v1.0.0](https://github.com/DannyExperiments/tredoku-pattern-digit-filling/releases/tag/v1.0.0) and [v1.0.1](https://github.com/DannyExperiments/tredoku-pattern-digit-filling/releases/tag/v1.0.1). See [`CITATION.cff`](CITATION.cff).
 
 ## Authorship and AI disclosure
 

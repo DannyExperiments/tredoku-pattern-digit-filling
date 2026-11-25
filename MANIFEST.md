@@ -5,9 +5,11 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `.gitattributes`
 - `.github/workflows/lean.yml`
 - `.github/workflows/pdf.yml`
+- `.github/workflows/release.yml`
 - `.github/workflows/replay.yml`
 - `.github/workflows/verify.yml`
 - `.gitignore`
+- `.zenodo.json`
 - `AI_DISCLOSURE.md`
 - `CITATION.cff`
 - `CLAIMS_EVIDENCE_MATRIX.md`
@@ -16,7 +18,7 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `LICENSE_STATUS.md`
 - `MANIFEST.md`
 - `PROVENANCE.md`
-- `README.md` — Overview
+- `README.md`
 - `REPRODUCIBILITY.md`
 - `SECURITY.md`
 - `STATUS.md`
@@ -24,20 +26,28 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `audits/public_safe_reports/MATHEMATICAL_AUDIT.md`
 - `formalization/Audit.lean`
 - `formalization/README.md`
-- `formalization/TredokuFilling.lean` — Lean logical core
+- `formalization/TredokuFilling.lean`
 - `formalization/lake-manifest.json`
 - `formalization/lakefile.toml`
 - `formalization/lean-toolchain`
 - `formalization/verify.sh`
 - `paper/BUILD.md`
-- `paper/manuscript.pdf` — Manuscript (PDF)
-- `paper/manuscript.tex` — Manuscript source
+- `paper/manuscript.pdf`
+- `paper/manuscript.tex`
 - `paper/references.bib`
 - `proof/PROBLEM_AND_PROOF.md`
+- `release/BADGE_ACTIVATION.md`
+- `release/DOI_DEPOSIT.md`
 - `release/EVIDENCE_BUNDLE.sha256`
 - `release/EVIDENCE_BUNDLE.zip`
 - `release/HUMAN_RELEASE_CHECKLIST.md`
+- `release/PUBLISH_v1.0.0`
+- `release/PUBLISH_v1.0.1`
 - `release/README.md`
+- `release/RELEASE_ASSET_SHA256SUMS.txt`
+- `release/RELEASE_NOTES_v1.0.0.md`
+- `release/RELEASE_NOTES_v1.0.1.md`
+- `scripts/build_release_assets.py`
 - `scripts/replay.py`
 - `scripts/verify_repository.py`
 - `verification/README.md`
@@ -47,12 +57,5 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `verification/tredoku_pattern_example.json`
 - `visualization/README.md`
 - `visualization/index.html`
-- `visualization/tredoku-filling-explorer.zip` — Offline interactive explorer
-- `visualization/tredoku.gif` — Rotating 3D figure
-- `release/RELEASE_NOTES_v1.0.0.md`
-- `.github/workflows/release.yml`
-- `release/PUBLISH_v1.0.0`
-- `scripts/build_release_assets.py`
-- `.zenodo.json`
-- `release/PUBLISH_v1.0.1`
-- `release/RELEASE_NOTES_v1.0.1.md`
+- `visualization/tredoku-filling-explorer.zip`
+- `visualization/tredoku.gif`

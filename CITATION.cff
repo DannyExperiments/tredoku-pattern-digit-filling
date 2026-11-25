@@ -4,6 +4,15 @@ title: "Every tredoku pattern admits a digit filling"
 type: software
 version: 1.0.1
 date-released: 2026-11-26
+doi: "10.5281/zenodo.24544626"
+url: "https://doi.org/10.5281/zenodo.24544626"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24544626"
+    description: "The version DOI for the Version 1.0.1 archive release."
+  - type: doi
+    value: "10.5281/zenodo.24544625"
+    description: "The concept DOI for all versions of this work."
 repository-code: "https://github.com/DannyExperiments/tredoku-pattern-digit-filling"
 authors:
   - name: "DannyExperiments"
@@ -13,3 +22,13 @@ keywords:
   - Latin squares
   - sudoku
   - de Bruijn ribbons
+preferred-citation:
+  type: software
+  title: "Every tredoku pattern admits a digit filling"
+  authors:
+    - name: "DannyExperiments"
+  version: 1.0.1
+  date-released: 2026-11-26
+  doi: "10.5281/zenodo.24544626"
+  url: "https://doi.org/10.5281/zenodo.24544626"
+  repository-code: "https://github.com/DannyExperiments/tredoku-pattern-digit-filling"

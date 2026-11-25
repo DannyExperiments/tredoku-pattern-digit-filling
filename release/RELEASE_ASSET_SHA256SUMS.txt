@@ -1,0 +1,6 @@
+700fed7586b3397e51366b5792d76883b6330d4dcdf29a0d0314113eb6ff4afc  CITATION.cff
+58455993f21352c17045db2b7b905281fa4f409825d8e475957fc921c30d9531  SHA256SUMS.txt
+e5ad3795352bd5edfa3317af4806cdbabbc14fd660792acdee44c3f6000a8b3f  references.bib
+f2e03e3589c293b2f5b5e67d6a092f78e3f3a2154a958c92de396f45633fbbaa  tredoku-pattern-digit-filling-public-evidence-v1.0.1.zip
+b0cddbfbaa44b29bba5cd5f497c99c12ca88e6f661743ab0be56671968d31eb2  tredoku-pattern-digit-filling-v1.0.1.pdf
+af8865be535aee18ac408055e3e379c89ef708988af4146174337db2236aac8c  tredoku-pattern-digit-filling-v1.0.1.tex
