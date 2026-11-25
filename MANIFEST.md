@@ -15,7 +15,6 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `CONTRIBUTING.md`
 - `LICENSE_STATUS.md`
 - `MANIFEST.md`
-- `PROBLEM_AND_PROOF.md`
 - `PROVENANCE.md`
 - `README.md` — Overview
 - `REPRODUCIBILITY.md`
