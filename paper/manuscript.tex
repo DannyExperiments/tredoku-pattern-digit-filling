@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\title{Every tredoku pattern admits a digit filling}
+
+\begin{document}
+
+\begin{abstract}
+Blackburn asked whether the diamonds of every tredoku pattern can be subdivided into $3\times 3$ grids and filled with the digits $1,\dots,9$ so that each diamond and each nine-cell line along a run of three diamonds contains every digit exactly once, and conjectured that the answer is yes.
+We prove this conjecture.
+The filling is explicit: each sub-diamond receives a point of $(\Z/3\Z)^2$ determined by two linear forms attached to the edge directions of its diamond and by the position of the diamond in its two runs.
+The same construction works for $q\times q$ subdivisions and runs of length $q$ for every $q\ge 2$, and it uses none of the connectivity conditions in the definition of a tredoku pattern.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Consider the tiling of the plane by equilateral triangles. Following Preece and Blackburn \cite{Blackburn}, a \emph{pattern} is a finite set of non-overlapping \emph{tiles}, each the union of two triangles of the tiling that share an edge; a tile is a rhombus (diamond) and has one of three orientations. A \emph{run of length $\ell$} is a maximal sequence $t_1,\dots,t_\ell$ of distinct tiles such that consecutive tiles share an edge and all of these shared edges are parallel. Runs are the pieces, inside a pattern, of the objects called de Bruijn ribbons, de Bruijn lines, worms or train tracks in the literature on rhombus tilings \cite{dB,BFRR,FH,KS}; Ridout records these synonyms \cite{Ridout}. A \emph{tredoku pattern} is a pattern of at least three tiles such that every run has length $1$ or $3$, the pattern is edge-connected, the region it covers is simply connected, and the region remains path-connected after the removal of any single tile \cite[Section~1]{Blackburn}.
+
+These patterns model the grids of the tredoku puzzle \cite{Mindome}. In the concluding remarks of \cite{Blackburn} (item~2), Blackburn subdivides each tile into a $3\times 3$ grid of sub-diamonds and asks whether there is always a way of assigning numbers from $\{1,\dots,9\}$ to the sub-diamonds so that the nine sub-diamonds of each tile, and the nine sub-diamonds in a straight line following each run of length $3$, receive every number exactly once. He conjectures that the answer is yes. The question appears in the first arXiv version of \cite{Blackburn} (July 2024), and the conjecture from the second version on. The question asks only for the existence of such an assignment; it does not ask for puzzles with a unique solution from given clues. Blackburn's main theorem determines the parameters (numbers of tiles, runs of length $3$ and leaves) for which tredoku patterns exist; Ridout \cite{Ridout} gives alternative proofs of parts of that theorem and enumerates small tilings. Blackburn poses the filling question; neither paper constructs fillings.
+
+We answer Blackburn's question affirmatively.
+
+\begin{theorem}\label{thm:main}
+Every tredoku pattern admits a filling: an assignment of the digits $1,\dots,9$ to the sub-diamonds of its tiles such that every tile, and every line of nine sub-diamonds along every run of length $3$, contains each digit exactly once.
+\end{theorem}
+
+The lines are made precise in Definition~\ref{def:line}. The proof gives a stronger statement (Theorem~\ref{thm:general}): for every $q\ge 2$ and every finite set of non-overlapping tiles subdivided into $q\times q$ grids, there is a labelling by $q^2$ symbols in which every tile and every line along every run of length exactly $q$ contains each symbol once. No connectivity hypothesis is used.
+
+\section{Coordinates on tiles}
+
+Fix the three unit vectors $u_0=(1,0)$, $u_1=(\tfrac12,\tfrac{\sqrt3}{2})$ and $u_2=u_1-u_0$ of the triangular lattice; every edge of the tiling is parallel to exactly one of them, and we call $u_d$ the positive orientation of direction $d\in\{0,1,2\}$. Any two of $u_0,u_1,u_2$ span a rhombus of side $1$ (with angle $60^\circ$ or $120^\circ$), and every tile has the form
+\[
+T = P + [0,1]\,u_d + [0,1]\,u_e
+\]
+for a unique lattice point $P$ and a unique pair $d\ne e$ of directions: $P$ is the corner of $T$ from which both positively oriented edges point into $T$. We call $d$ and $e$ the directions of $T$. The edges of $T$ parallel to $u_d$ are the segments $P+[0,1]u_d$ and $P+u_e+[0,1]u_d$.
+
+Fix $q\ge 2$ and subdivide $T$ into the $q^2$ sub-diamonds
+\[
+T(i,j)=P+\bigl[\tfrac{i}{q},\tfrac{i+1}{q}\bigr]u_d+\bigl[\tfrac{j}{q},\tfrac{j+1}{q}\bigr]u_e,\qquad 0\le i,j\le q-1 .
+\]
+The index $i$ of $T(i,j)$ is its \emph{coordinate along $d$} and $j$ its coordinate along $e$. Each of the two edges of $T$ parallel to $u_d$ is divided into $q$ segments of length $1/q$, numbered $0,\dots,q-1$ in the order of $u_d$; the sub-diamonds $T(i,0)$ and $T(i,q-1)$ meet these edges in their segments number $i$.
+
+\begin{definition}\label{def:line}
+Let $T$ be a tile with direction $d$. The \emph{strip} of $T$ along $d$ with index $i$ is $\{T(i,j):0\le j\le q-1\}$; it joins segment $i$ of one edge of $T$ parallel to $u_d$ to segment $i$ of the other. Let $t_1,\dots,t_q$ be a run of length $q$ whose shared edges are parallel to $u_d$. A \emph{line} along this run is a union of strips $S_1,\dots,S_q$ along $d$, with $S_m$ a strip of $t_m$, such that for each $m<q$ some sub-diamond of $S_m$ and some sub-diamond of $S_{m+1}$ meet the common edge of $t_m$ and $t_{m+1}$ in the same segment.
+\end{definition}
+
+For $q=3$ these are the nine-cell straight lines of the tredoku puzzle: a line enters each tile of the run through one of its edges parallel to the shared direction, crosses the tile along a strip, and continues into the next tile through the same segment of their common edge. Where the other direction changes from one tile to the next, the line bends. Equivalently, the lines are the ribbons of the pattern of sub-diamonds that lie over runs.
+
+\begin{lemma}\label{lem:index}
+If two tiles share an edge parallel to $u_d$, then a sub-diamond of the first tile and a sub-diamond of the second that meet this edge in the same segment have the same coordinate along $d$. Consequently all strips of a line along a run have the same index.
+\end{lemma}
+
+\begin{proof}
+Let the common edge be $E=Q+[0,1]u_d$, where $Q$ is its endpoint from which $u_d$ points along $E$. For either tile $T=P+[0,1]u_d+[0,1]u_e$, the edge $E$ is one of $P+[0,1]u_d$ and $P+u_e+[0,1]u_d$, with $Q=P$ or $Q=P+u_e$ respectively. In both cases the sub-diamonds of $T$ meeting $E$ in a segment are the $q$ sub-diamonds $T(i,j_0)$ with $j_0=0$ or $j_0=q-1$ fixed, and $T(i,j_0)$ meets $E$ in the segment $Q+[\tfrac iq,\tfrac{i+1}{q}]u_d$. This description depends only on $E$ and the orientation $u_d$, not on the other direction $e$ of the tile. Hence equal segments give equal coordinates along $d$. The second statement follows by applying this to consecutive tiles of the run.
+\end{proof}
+
+For tilings of a region, the analogue of the next lemma is the standard fact that ribbons have no loops \cite[Lemma~2.2]{FH}; we include a proof because a pattern is only a set of tiles.
+
+\begin{lemma}\label{lem:runs}
+Let $\mathcal T$ be a pattern and $d$ a direction. Every tile of $\mathcal T$ with direction $d$ lies in exactly one run whose shared edges are parallel to $u_d$, and the tiles of such a run are distinct and all have direction $d$.
+\end{lemma}
+
+\begin{proof}
+Let $T$ have direction $d$; then exactly two sides of $T$ are parallel to $u_d$. A tile containing an edge parallel to $u_d$ has direction $d$. Each edge of the tiling bounds exactly two triangles, and by non-overlap each triangle lies in at most one tile; hence each of the two edges of $T$ parallel to $u_d$ is shared with at most one other tile of $\mathcal T$. So the graph on tiles of direction $d$, joining two tiles when they share an edge parallel to $u_d$, has maximum degree $2$. Let $\nu$ be a unit normal to $u_d$. Each of $u_0,u_1,u_2$ other than $u_d$ has inner product $\pm\tfrac{\sqrt3}{2}$ with $\nu$, so the two edges of a tile parallel to $u_d$ lie on lines $\langle x,\nu\rangle=c$ and $\langle x,\nu\rangle=c\pm\tfrac{\sqrt3}{2}$, and the tile lies in the closed band between them. If $t_1,t_2,\dots$ is a walk in this graph that never immediately returns to the previous tile, then $t_{m+1}$ lies on the other side of the common edge of $t_m$ and $t_{m+1}$ from $t_m$, so it shares its other edge parallel to $u_d$ with $t_{m+2}$, and the values of $\langle\cdot,\nu\rangle$ on successive shared edges are strictly monotone. Hence the graph has no cycles, its components are paths, and the maximal sequences of the definition of a run are exactly these components. A tile lies in exactly one component.
+\end{proof}
+
+\section{The labelling}
+
+Write $\Lambda=(\Z/q\Z)^2$ and attach to the three directions the linear forms
+\[
+L_0(x,y)=x,\qquad L_1(x,y)=y,\qquad L_2(x,y)=x+y .
+\]
+For distinct $d,e$ the map $\Lambda\to(\Z/q\Z)^2$, $v\mapsto(L_d(v),L_e(v))$, is a bijection, since its matrix has determinant $\pm1$.
+
+Let $\mathcal T$ be a finite set of non-overlapping tiles. By Lemma~\ref{lem:runs}, for each tile $T$ and each direction $d$ of $T$ there is a unique run $R_d(T)$ of direction $d$ containing $T$. For each run $R=(t_1,\dots,t_\ell)$ with $\ell\le q$ choose distinct offsets $o(t_1,d),\dots,o(t_\ell,d)\in\Z/q\Z$, for instance $o(t_m,d)=m-1$; for runs longer than $q$ choose arbitrary offsets. Label the sub-diamond $T(i,j)$ of a tile with directions $d,e$ by the unique $\lambda(T(i,j))\in\Lambda$ with
+\begin{equation}\label{eq:label}
+L_d\bigl(\lambda(T(i,j))\bigr)=i+o(T,d),\qquad L_e\bigl(\lambda(T(i,j))\bigr)=j+o(T,e).
+\end{equation}
+This depends only on $T$ and the unordered pair $\{d,e\}$, since \eqref{eq:label} is symmetric in the two directions.
+
+\begin{theorem}\label{thm:general}
+Let $q\ge 2$ and let $\mathcal T$ be a finite set of non-overlapping tiles, each subdivided into $q\times q$ sub-diamonds. The labelling $\lambda$ gives the $q^2$ sub-diamonds of every tile distinct labels, gives distinct labels to the sub-diamonds of every line along every run of length at most $q$, and therefore gives every line along every run of length exactly $q$ each element of $\Lambda$ exactly once.
+\end{theorem}
+
+\begin{proof}
+For a tile $T$ with directions $d,e$, the map $(i,j)\mapsto\lambda(T(i,j))$ is the composition of the bijection $(i,j)\mapsto(i+o(T,d),\,j+o(T,e))$ of $(\Z/q\Z)^2$ with the inverse of $v\mapsto(L_d(v),L_e(v))$, so it is a bijection onto $\Lambda$.
+
+Let $R=(t_1,\dots,t_\ell)$ be a run of direction $d$ with $\ell\le q$ and let $S_1\cup\dots\cup S_\ell$ be a line along it. By Lemma~\ref{lem:index} all $S_m$ have the same index $i$. By \eqref{eq:label}, every sub-diamond of $S_m$ has a label in the fibre $L_d^{-1}(i+o(t_m,d))$, and within $S_m$ the labels are distinct by the tile statement. The offsets $o(t_m,d)$ are distinct, so the fibres for different $m$ are disjoint, and all $q\ell$ labels on the line are distinct. When $\ell=q$, the line has $q^2=|\Lambda|$ sub-diamonds, so every element of $\Lambda$ occurs exactly once.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Take $q=3$ and identify $(x,y)\in\Lambda$, with representatives $x,y\in\{0,1,2\}$, with the digit $1+3x+y$; this is a bijection from $\Lambda$ onto $\{1,\dots,9\}$. In a tredoku pattern every run has length $1$ or $3$, so Theorem~\ref{thm:general} constrains exactly the runs of length $3$, and runs of length $1$ impose no line condition.
+\end{proof}
+
+\begin{remark}\label{rem:ingredients}
+The proof uses only that the tiles do not overlap. Edge-connectivity, simple connectivity and the condition on removing a tile play no role, and runs of length other than $q$ impose no constraint. The bound $\ell\le q$ is necessary for a line to have distinct labels, since a line along a run of length $\ell$ has $q\ell$ sub-diamonds and there are only $q^2$ labels. The three linear forms are the rows, columns and symbols of the cyclic Latin square of order $q$, that is, three mutually orthogonal partitions of $\Lambda$ into $q$ classes \cite{KD}; any Latin square of order $q$ would serve equally well. Runs through a common tile have different directions, as Ridout observes for his run graph \cite{Ridout}, so the three partitions can be assigned to the three directions. Shifting coordinates by the position of a tile in its run is the analogue for lozenges of the design-key construction of Sudoku solutions \cite{PB,BCC}. For $q=2$, fillings of particular patterns with runs of length $2$ appear as published puzzles \cite{Ridout}. Our contribution is the observation that these standard ingredients suffice for every tredoku pattern.
+\end{remark}
+
+\section{Verification and status}
+
+The proof above is complete and does not rely on computation. As corroboration only, an independent simulation on the triangular lattice in exact integer coordinates builds random patterns, constructs lines geometrically from shared boundary segments, applies \eqref{eq:label} and checks all tiles and lines; a variant with a deliberately wrong index convention is detected immediately. A Lean~4 development checks the logical core: it formalizes the lattice, the three tile types, the $3\times3$ subdivision and lines defined through shared boundary segments, proves Lemma~\ref{lem:index} for all combinations of direction and tile types, and proves the conclusions of Theorem~\ref{thm:general} for $q=3$ for any family of three-tile runs that are pairwise disjoint within each direction. Lemma~\ref{lem:runs} and the count of nine sub-diamonds per line are not formalized. The result has not been refereed. To our knowledge Blackburn's question has not previously been answered: a documented search of the literature through 26~November~2026 found no construction of fillings. The proof combines standard ingredients, as described in Remark~\ref{rem:ingredients}.
+
+\begin{thebibliography}{99}
+\bibitem{Blackburn}
+S.~R. Blackburn, \emph{Tredoku patterns}, Electron.\ J.\ Combin.\ \textbf{33}(3) (2026), \#P3.58, \href{https://doi.org/10.37236/13659}{doi:10.37236/13659}; preprint \href{https://arxiv.org/abs/2407.10752}{arXiv:2407.10752}.
+\bibitem{BCC}
+R.~A. Bailey, P.~J. Cameron and R.~Connelly, \emph{Sudoku, gerechte designs, resolutions, affine space, spreads, reguli, and Hamming codes}, Amer.\ Math.\ Monthly \textbf{115} (2008), 383--404, \href{https://doi.org/10.1080/00029890.2008.11920542}{doi:10.1080/00029890.2008.11920542}.
+\bibitem{BFRR}
+O.~Bodini, T.~Fernique, M.~Rao and \'E.~R\'emila, \emph{Distances on rhombus tilings}, Theoret.\ Comput.\ Sci.\ \textbf{412} (2011), 4787--4794, \href{https://doi.org/10.1016/j.tcs.2011.04.015}{doi:10.1016/j.tcs.2011.04.015}.
+\bibitem{dB}
+N.~G. de~Bruijn, \emph{Algebraic theory of Penrose's non-periodic tilings of the plane. I, II}, Indag.\ Math.\ \textbf{43} (1981), 39--52 and 53--66.
+\bibitem{FH}
+D.~Frettl\"oh and E.~Harriss, \emph{Parallelogram tilings, worms, and finite orientations}, Discrete Comput.\ Geom.\ \textbf{49} (2013), 531--539, \href{https://doi.org/10.1007/s00454-012-9478-5}{doi:10.1007/s00454-012-9478-5}.
+\bibitem{KD}
+A.~D. Keedwell and J.~D\'enes, \emph{Latin Squares and their Applications}, 2nd ed., Elsevier, Amsterdam, 2015.
+\bibitem{KS}
+R.~Kenyon and J.-M. Schlenker, \emph{Rhombic embeddings of planar quad-graphs}, Trans.\ Amer.\ Math.\ Soc.\ \textbf{357} (2005), 3443--3458, \href{https://doi.org/10.1090/S0002-9947-04-03545-7}{doi:10.1090/S0002-9947-04-03545-7}.
+\bibitem{Mindome}
+Mindome Ltd, \emph{Tredoku: 3-D Puzzles Based on the Rules of Classic Sudoku}, Penguin, New York, 2011.
+\bibitem{PB}
+H.~D. Patterson and R.~A. Bailey, \emph{Design keys for factorial experiments}, J.\ Roy.\ Statist.\ Soc.\ Ser.~C \textbf{27} (1978), 335--343, \href{https://doi.org/10.2307/2347170}{doi:10.2307/2347170}.
+\bibitem{Ridout}
+M.~Ridout, \emph{Professor Preece's tredoku tilings}, preprint (2025), \href{https://arxiv.org/abs/2511.12680}{arXiv:2511.12680}.
+\end{thebibliography}
+
+\end{document}

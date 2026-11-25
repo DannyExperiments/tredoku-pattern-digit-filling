@@ -1,0 +1,11 @@
+name: pdf
+on: [push, pull_request]
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: xu-cheng/latex-action@v3
+        with:
+          root_file: manuscript.tex
+          working_directory: paper

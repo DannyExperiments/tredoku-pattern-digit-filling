@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Every tredoku pattern admits a digit filling"
+version: "1.0.0-candidate"
+authors:
+  - name: "DannyExperiments"
+repository-code: "https://github.com/DannyExperiments/tredoku-pattern-digit-filling"
+keywords: [tredoku, lozenge tilings, Latin squares, sudoku]
