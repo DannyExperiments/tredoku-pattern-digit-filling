@@ -30,9 +30,6 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `formalization/lean-toolchain`
 - `formalization/verify.sh`
 - `paper/BUILD.md`
-- `paper/CHANGELOG_FROM_CANONICAL_PROOF.md`
-- `paper/CLAIM_SCOPE_AND_LIMITATIONS.md`
-- `paper/SOURCE_TO_MANUSCRIPT_COMPARISON.md`
 - `paper/manuscript.pdf` — Manuscript (PDF)
 - `paper/manuscript.tex` — Manuscript source
 - `paper/references.bib`
