@@ -53,3 +53,6 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `.github/workflows/release.yml`
 - `release/PUBLISH_v1.0.0`
 - `scripts/build_release_assets.py`
+- `.zenodo.json`
+- `release/PUBLISH_v1.0.1`
+- `release/RELEASE_NOTES_v1.0.1.md`

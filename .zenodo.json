@@ -1,0 +1,31 @@
+{
+  "title": "Every tredoku pattern admits a digit filling",
+  "upload_type": "software",
+  "version": "1.0.1",
+  "creators": [
+    {
+      "name": "DannyExperiments"
+    }
+  ],
+  "description": "<p>Every tredoku pattern can be filled with the digits 1–9 so that every diamond, and every line of nine cells along every run of three diamonds, contains each digit exactly once. This proves the conjecture in S. R. Blackburn, <i>Tredoku patterns</i>, Electron. J. Combin. 33(3) (2026) #P3.58, concluding remarks item 2. More generally, for every q ≥ 2 and every finite set of non-overlapping lozenges subdivided q×q there is a labelling by (ℤ/q)² that is complete on every tile and on every line along every run of exactly q tiles.</p><p>Contents: four-page manuscript (PDF, TeX), proof outline, partial logical-core Lean 4 formalization with axiom audit, corroborating geometric verification with a negative control, audit summaries, interactive 3D explorer. Version 1.0.1 adds only this archive metadata to the reviewed Version 1.0.0.</p><p>Authorship and AI disclosure: DannyExperiments directed the investigation and required independent audits, a literature check and a Lean check. Astra 6.2 (OpenAI) found the construction and proof. Claude Opus 5.5 (Anthropic) audited the proof, ran three independent mathematical audits and three literature and priority searches, wrote the verification code and the Lean development, and prepared the manuscript and repository. No AI system is listed as an author. The result appears to be new after a documented search through 26 November 2026; its ingredients are standard and credited. The work has not undergone human specialist peer review.</p>",
+  "keywords": [
+    "tredoku",
+    "lozenge tilings",
+    "Latin squares",
+    "sudoku",
+    "de Bruijn ribbons"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/DannyExperiments/tredoku-pattern-digit-filling/releases/tag/v1.0.0",
+      "relation": "isNewVersionOf",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/DannyExperiments/tredoku-pattern-digit-filling",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Version 1.0.1 is identical to Version 1.0.0 except for this archive metadata file (.zenodo.json) and the release bookkeeping that records it. The mathematics, manuscript, code and logs are unchanged."
+}
