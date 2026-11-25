@@ -37,6 +37,7 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `paper/references.bib`
 - `proof/PROBLEM_AND_PROOF.md`
 - `release/BADGE_ACTIVATION.md`
+- `release/BRANCH_PROTECTION.md`
 - `release/DOI_DEPOSIT.md`
 - `release/EVIDENCE_BUNDLE.sha256`
 - `release/EVIDENCE_BUNDLE.zip`
