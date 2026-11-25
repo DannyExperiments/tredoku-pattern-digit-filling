@@ -1,15 +1,28 @@
-name: verify
-on: [push, pull_request]
+name: Verify public candidate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
-  verify:
+  verify-public-candidate:
+    name: Verify public candidate
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with: {python-version: '3.12'}
-      - name: Geometric check (corroborating)
-        run: python3 -I verification/src/geometric_check.py
-      - name: Negative control must be detected
-        run: python3 -I verification/src/geometric_check.py --negative-control
-      - name: Checksums
-        run: sha256sum -c SHA256SUMS.txt
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.11"
+      - name: Verify hashes and privacy scan
+        run: python3 -I scripts/verify_repository.py

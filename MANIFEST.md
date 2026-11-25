@@ -1,34 +1,55 @@
 # Manifest
-- .github/workflows/lean.yml
-- .github/workflows/pdf.yml
-- .github/workflows/verify.yml
-- AI_DISCLOSURE.md
-- CITATION.cff
-- CLAIMS_EVIDENCE_MATRIX.md
-- CONTRIBUTING.md
-- LICENSE_STATUS.md
-- PROBLEM_AND_PROOF.md
-- PROVENANCE.md
-- README.md
-- REPRODUCIBILITY.md
-- SECURITY.md
-- STATUS.md
-- audits/README.md
-- audits/public_safe_reports/summary.md
-- formalization/README.md
-- formalization/lean/README.md
-- formalization/lean/TredokuFilling.lean
-- formalization/lean/lean-toolchain
-- paper/BUILD.md
-- paper/CHANGELOG_FROM_CANONICAL_PROOF.md
-- paper/CLAIM_SCOPE_AND_LIMITATIONS.md
-- paper/SOURCE_TO_MANUSCRIPT_COMPARISON.md
-- paper/manuscript.pdf
-- paper/manuscript.tex
-- release/EVIDENCE_BUNDLE.zip
-- release/RELEASE_NOTES.md
-- verification/README.md
-- verification/logs/geometric_check.log
-- verification/logs/negative_control.log
-- verification/src/geometric_check.py
-- SHA256SUMS.txt (per-file SHA-256 of all of the above)
+
+Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
+
+- `.gitattributes`
+- `.github/workflows/lean.yml`
+- `.github/workflows/pdf.yml`
+- `.github/workflows/replay.yml`
+- `.github/workflows/verify.yml`
+- `.gitignore`
+- `AI_DISCLOSURE.md`
+- `CITATION.cff`
+- `CLAIMS_EVIDENCE_MATRIX.md`
+- `CLAIM_SCOPE_AND_LIMITATIONS.md`
+- `CONTRIBUTING.md`
+- `LICENSE_STATUS.md`
+- `MANIFEST.md`
+- `PROBLEM_AND_PROOF.md`
+- `PROVENANCE.md`
+- `README.md` — Overview
+- `REPRODUCIBILITY.md`
+- `SECURITY.md`
+- `STATUS.md`
+- `audits/public_safe_reports/LITERATURE_PRIORITY_AUDIT_2026-11-26.md`
+- `audits/public_safe_reports/MATHEMATICAL_AUDIT.md`
+- `formalization/Audit.lean`
+- `formalization/README.md`
+- `formalization/TredokuFilling.lean` — Lean logical core
+- `formalization/lake-manifest.json`
+- `formalization/lakefile.toml`
+- `formalization/lean-toolchain`
+- `formalization/verify.sh`
+- `paper/BUILD.md`
+- `paper/CHANGELOG_FROM_CANONICAL_PROOF.md`
+- `paper/CLAIM_SCOPE_AND_LIMITATIONS.md`
+- `paper/SOURCE_TO_MANUSCRIPT_COMPARISON.md`
+- `paper/manuscript.pdf` — Manuscript (PDF)
+- `paper/manuscript.tex` — Manuscript source
+- `paper/references.bib`
+- `proof/PROBLEM_AND_PROOF.md`
+- `release/EVIDENCE_BUNDLE.sha256`
+- `release/EVIDENCE_BUNDLE.zip`
+- `release/HUMAN_RELEASE_CHECKLIST.md`
+- `release/README.md`
+- `scripts/replay.py`
+- `scripts/verify_repository.py`
+- `verification/README.md`
+- `verification/logs/geometric_check.log`
+- `verification/logs/negative_control.log`
+- `verification/src/geometric_check.py`
+- `verification/tredoku_pattern_example.json`
+- `visualization/README.md`
+- `visualization/index.html`
+- `visualization/tredoku-filling-explorer.zip` — Offline interactive explorer
+- `visualization/tredoku.gif` — Rotating 3D figure

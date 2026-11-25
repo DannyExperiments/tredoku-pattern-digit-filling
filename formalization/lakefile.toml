@@ -1,0 +1,5 @@
+name = "tredoku"
+defaultTargets = ["TredokuFilling"]
+
+[[lean_lib]]
+name = "TredokuFilling"

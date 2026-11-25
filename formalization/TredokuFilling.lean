@@ -327,5 +327,3 @@ example : bendLine.s1 = bendLine.s2 ∧ bendLine.s2 = bendLine.s3 :=
     simp only [bendRun, Run.tiles, List.mem_cons, List.not_mem_nil, or_false] at ht
     rcases ht with rfl | rfl | rfl <;> simp [bendRun, Tile.HasDir, Tile.di, Tile.dj])
 
-#print axioms along_eq_of_link
-#print axioms exists_filling
