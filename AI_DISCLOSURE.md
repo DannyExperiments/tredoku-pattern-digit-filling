@@ -9,4 +9,4 @@ Under human direction, an OpenAI model (GPT-6.2 Astra, in the ChatGPT desktop ap
 
 AI agreement is not treated as proof, peer review or evidence of novelty. The release process keeps these separate: the proof, the corroborating computation, the mathematical audits, the literature and priority review, the manuscript check, formal verification (partial), and human release approval.
 
-No AI system is listed as an author. The proposed repository author identity is `DannyExperiments`.
+No AI system is listed as an author. The approved repository author identity is `DannyExperiments`.

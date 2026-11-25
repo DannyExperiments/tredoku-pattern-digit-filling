@@ -49,3 +49,4 @@ Every tracked file except `SHA256SUMS.txt` (which hashes all of them).
 - `visualization/index.html`
 - `visualization/tredoku-filling-explorer.zip` — Offline interactive explorer
 - `visualization/tredoku.gif` — Rotating 3D figure
+- `release/RELEASE_NOTES_v1.0.0.md`
